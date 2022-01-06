@@ -1,0 +1,564 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+
+
+:root {
+    --main-color: rgb(255, 255, 255);
+    --btncolor: rgb(255, 251, 0);
+    --navcolor: rgb(0, 136, 125);
+    --footer: rgb(15, 9, 48);
+    --links: rgb(33, 33, 53);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+button, #close, #menu {
+    cursor: pointer;
+}
+body {
+    background-color: var(--main-color);
+}
+svg {
+    margin: -6em 0 6em 0;
+    z-index: 2;
+    position: relative;
+}
+.first {
+    margin-top: -6.5em;
+}
+.second {
+    background-color: #b3ffff;
+    padding-bottom: 3em;
+}
+.secondupper {
+    margin-top: 3em;
+}
+button {
+    transition: .25s ease-in-out;
+}
+button:hover {
+    transform: scale(1.005);
+}
+.large_screen {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+.morebtn {
+    display: grid;
+    justify-content: end;
+    padding: 0 .5em;
+}
+/* navigation */
+header .navigation .row_one {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+    z-index: 3;
+}
+header .navigation .row_one .col_one .logo {
+    padding: .6em 0;
+}
+header .navigation .row_one .col_one .logo img {
+    width: 4em;
+}
+header .navigation .row_one .col_two .nav_items {
+    position: fixed;
+    z-index: 1001;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: var(--navcolor);
+}
+header .navigation .row_one .col_two .nav_items .close {
+    padding: 1.4em .6em;
+    display: grid;
+    justify-content: end;
+}
+header .navigation .row_one .col_two .nav_items .close img {
+    width: 1.2em;
+}
+header .navigation .row_one .col_two .nav_items ul {
+    text-align: center;
+    display: grid;
+    list-style: none;
+    grid-gap: 1em;
+    margin: 2em auto;
+    font-family: 'Roboto', sans-serif;
+}
+header .navigation .row_one .col_two .nav_items ul li {
+    width: 75%;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1em;
+}
+header .navigation .row_one .col_two .nav_items ul li a {
+    text-decoration: none;
+    color: rgb(226, 253, 255);
+    font-size: 18px;
+    letter-spacing: 2px;
+    padding: 1em 0;
+    border: 1px solid var(--btncolor);
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-radius: 10px;
+}
+header .navigation .row_one .col_two .nav_items ul p {
+    color: rgb(0, 217, 255);
+    padding-top: 3em;
+    letter-spacing: 1px;
+    font-size: 13px;
+}
+.shownav {
+    left: -100vh;
+}
+.opennav {
+    left: 0;
+}
+header .navigation .row_one .col_three {
+    display: flex;
+    grid-gap: 1em;
+    padding: .9em .5em;
+}
+header .navigation .row_one .col_three .logins button {
+    outline: none;
+    border: 2px solid rgb(227, 255, 71);
+    padding: .5em 1.5em;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 20px;
+    transition: all .25s ease-in-out;
+}
+header .navigation .row_one .col_three .logins button:hover {
+    border: 2px solid rgb(0, 140, 255);
+}
+header .navigation .row_one .col_three .menu img {
+    width: 1.5em;
+    padding-top: .3em;
+}
+
+/* body */
+.body_content {
+    display: grid;
+    grid-gap: 1em;
+    margin-bottom: 1em;
+}
+.body_content .row_one {
+    background-image: url(../Assets/images/home/bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -4.8em;
+}
+.body_content .row_one .header_txt {
+    height: 101vh;
+    padding: 10em 0 12em 0;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.76);
+}
+.body_content .row_one .header_txt h1 {
+    font-family: 'M PLUS 1', sans-serif;
+    padding-bottom: .5em;
+    font-size: 20px;
+}
+.body_content .row_one .header_txt p,
+.body_content .row_one .header_txt a {
+    font-family: 'Raleway', sans-serif;
+    padding-bottom: .9em;
+    font-size: 13px;
+    line-height: 20px;
+}
+.body_content .row_one .header_txt #action_btn {
+    display: grid;
+}
+.body_content .row_one .header_txt a {
+    color: rgb(229, 255, 0);
+    line-height: 1em;
+    margin-top: 1em;
+    text-decoration: underline;
+}
+.body_content .row_one .header_txt button {
+    margin-top: .3em;
+    padding: 1em 2em;
+    border-radius: 1em;
+    outline: none;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 136, 0);
+    background-color: transparent;
+}
+    .body_content .row_two .col_two .grid_items a,
+    .body_content .row_two .col_three .projects a,
+    .body_content .row_two .col_four .courses a {
+        background-color: rgb(255, 255, 255);
+        border-radius: 5px;
+    }
+.body_content .row_two {
+    font-family: 'DM Sans', sans-serif;
+}
+.body_content .row_two img {
+    border-radius: 2px;
+}
+.body_content .row_two .col_one {
+    text-align: center;
+    padding: 2em .3em;
+    display: grid;
+    grid-gap: .5em;
+    position: relative;
+    z-index: 4;
+}
+.body_content .row_two .col_two .grid_items {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: .8em;
+    padding: .3em .8em;
+}
+.body_content .row_two .col_two .col1 {
+    border: 1px solid rgba(0, 0, 0, 0.089);
+    border-radius: 5px;
+    transition: all .25s ease-in-out;
+}
+.body_content .row_two .col_two .col1 img {
+    width: 100%;
+}
+.body_content .row_two .col_two .col1 h3,
+.body_content .row_two .col_three .gold_projects h3 {
+    padding: .2em .8em;
+}
+.body_content .row_two .col_two .col1 p,
+.body_content .row_two .col_three .gold_projects p {
+    padding: .5em .8em;
+}
+.body_content .row_two .col_three .projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: .8em;
+    padding:  .3em .8em;
+}
+.body_content .row_two .col_three .gold_projects,
+.body_content .row_two .col_four .gold_courses {
+    border: 1px solid rgba(255, 56, 56, 0.089);
+    border-radius: 5px;
+    transition: all .25s ease-in-out;
+}
+.body_content .row_two .col_two .col1:hover, 
+.body_content .row_two .col_three .gold_projects:hover,
+.body_content .row_two .col_four .gold_courses:hover {
+    transform: scale(1.005);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.164);
+}
+.body_content .row_two .col_three .gold_projects img {
+    width: 100%;
+}
+.body_content .row_two .col_three .gold_projects button {
+    padding: .8em .8em;
+    margin: 1em .8em;
+    outline: none;
+    border: 1px solid rgb(255, 94, 0);
+    background-color: transparent;
+    border-radius: 10px;
+    width: 50%;
+    min-width: 10em;
+    transition: all .25s ease-in-out;
+}
+.body_content .row_two .col_three .gold_projects button:hover {
+    transform:  scale(1.01);
+}
+.body_content .row_two .col_four .courses {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: .4em;
+    padding:  .3em .8em;   
+}
+.body_content .row_two .col_two .grid_items a,
+.body_content .row_two .col_three .projects a,
+.body_content .row_two .col_four .courses a {
+    text-decoration: none;
+    color: #000;
+}
+.body_content .row_two .col_four .gold_courses img {
+    width: 100%;
+    height: 6.5em;
+}
+.body_content .row_two .col_four .gold_courses h3 {
+    font-size: 15px;
+    padding: .3em;
+}
+.body_content .row_two .col_four .gold_courses p {
+    font-size: 12px;
+    display: -webkit-box;
+    margin: 0;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    padding: 0 .3em;
+}
+.body_content .row_two .col_four .gold_courses button {
+    padding: .4em 1em;
+    margin: .8em 0 .8em .3em;
+    width: 70%;
+    outline: none;
+    border-radius: 30px;
+    border: 1px solid rgb(0, 168, 84);
+    background-color: transparent;
+    min-width: 6em;
+}
+.body_content .row_three {
+    width: 80%;
+    margin: 0 auto;
+}
+.body_content .row_three .joinusbarner {
+    width: 100%;
+    margin: 2em 0;
+    display: grid;
+    justify-content: center;
+    background-color: rgb(94, 197, 175);
+    padding: 3em 0;
+}
+.body_content .row_three .joinusbarner h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+.body_content .row_three .joinusbarner .joinusbtn {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    padding: 1em 0 0 0;
+}
+.body_content .row_three .joinusbarner .joinusbtn button {
+    padding: .8em 3em;
+    outline: none;
+    border: 1px solid rgb(209, 0, 209);
+    background-color: rgb(209, 0, 209);
+    border-radius: 20px;
+    color: rgb(210, 244, 255);
+}
+
+/* footer */
+footer .footer_content {
+    background-color: var(--footer);
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(211, 214, 255);
+    font-size: 13px;
+    display: grid;
+    grid-gap: .5em;
+    padding-bottom: 1em;
+}
+footer .footer_content .links {
+    height: 20rem;
+    background-color: var(--links);
+}
+.footer_content .copyrights {
+    display: flex;
+    grid-gap: .5em;
+    padding: 0 1em;
+    padding-top: 1em;
+}
+.footer_content .companyrights {
+    display: grid;
+    grid-template-columns: .8em 1fr;
+    padding: 0 1em;
+}
+.footer_content .companyrights .copyright img {
+    width: .8em;
+    padding-top: .26em;
+}
+.footer_content .location {
+    padding: 0 1em;
+}
+.footer_content .location p {
+    color: rgb(147, 212, 180);
+    font-size: 12px;
+}
+
+@media all and (min-width: 320px) {
+    .body_content .row_one .header_txt {
+        padding: 19em .5em 12em .5em;
+    }
+    .body_content .row_one .header_txt h1 {
+        font-size: 23px;
+    }
+}
+@media all and (min-width: 420px) {
+    .body_content .row_two .col_two .grid_items,
+    .body_content .row_two .col_three .projects {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media all and (min-width: 450px) {
+    .body_content .row_two .col_four .gold_courses h3 {
+        font-size: 19px;
+    }
+    .body_content .row_two .col_four .gold_courses p {
+        font-size: 15px;
+        -webkit-line-clamp: 2;
+    }
+    .body_content .row_two .col_four .gold_courses button {
+        padding: .6em 1em;
+        min-width: 10em;
+    }
+}
+@media all and (min-width: 550px) {
+    svg {
+        margin: -15em 0 5em 0;
+        z-index: 2;
+        position: relative;
+    }
+    .small_screen {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+    .large_screen {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+    }
+    .navbar .row_one {
+        display: grid;
+        grid-template-columns: 5em 1fr 1fr;
+        position: relative;
+        z-index: 3;
+    }
+    .navbar .row_one .col_one .logo {
+        padding: .6em .5em;
+    }
+    .navbar .row_one .col_one .logo img {
+        width: 4em;
+    }
+    .navbar .row_one .col_two .navbar_items ul {
+        display: grid;
+        grid-template-columns: repeat( 5, 1fr );
+        grid-gap: 0;
+        list-style: none;
+        padding: 1.4em 0;
+        font-family: 'Quicksand', sans-serif;
+    }
+    .navbar .row_one .col_two .navbar_items ul li a {
+        color: rgb(213, 243, 255);
+        text-decoration: none;
+        letter-spacing: .5px;
+        font-size: 14px;
+        padding: 0 .5em;
+        border-right: 1px solid violet;
+        transition: all .25s ease-in-out;
+    }
+    .navbar .row_one .col_two .navbar_items ul li a:hover,
+    .navbar .row_one .col_two .navbar_items ul li a:focus,
+    .navbar .row_one .col_two .navbar_items ul li a:active {
+        color: rgb(0, 204, 255);
+    }
+    .navbar .row_one .col_three {
+        display: grid;
+        justify-content: end;
+        padding: .9em .8em;
+    }
+    .navbar .row_one .col_three .logins {
+        display: flex;
+        grid-gap: .5em;
+    }
+    .navbar .row_one .col_three .logins button {
+        padding: .6em 2em;
+        outline: none;
+        border: 1px solid rgb(0, 255, 13);
+        color: rgb(255, 224, 224);
+        background-color: transparent;
+        border-radius: 20px;
+    }
+    .body_content .row_two .col_two .grid_items img,
+    .body_content .row_two .col_three .projects img,
+    .body_content .row_two .col_four .gold_courses img {
+        width: 100%;
+        height: 10em;
+    }
+}
+@media all and (min-width: 700px) {
+    .body_content .row_two .col_two .grid_items,
+    .body_content .row_two .col_three .projects,
+    .body_content .row_two .col_four .courses {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .body_content .row_two .col_two .grid_items img,
+    .body_content .row_two .col_three .projects img,
+    .body_content .row_two .col_four .gold_courses img {
+        width: 100%;
+        height: 10em;
+    }
+}
+@media all and (min-width: 800px) {
+    .body_content .row_two .col_two .grid_items,
+    .body_content .row_two .col_three .projects,
+    .body_content .row_two .col_four .courses {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1em;
+    }
+    .body_content .row_two .col_two .grid_items img,
+    .body_content .row_two .col_three .projects img,
+    .body_content .row_two .col_four .gold_courses img {
+        width: 100%;
+        height: 10em;
+    }
+    footer .footer_content .bottom_footer {
+        display: flex;
+        grid-gap: 1em;
+        justify-content: center;
+    }
+    footer .footer_content .bottom_footer .companyrights,
+    footer .footer_content .bottom_footer .location {
+        padding: 1em 0;
+    }
+}
+@media all and (min-width: 1000px) {
+    .navbar .row_one .col_two .navbar_items ul li a {
+        padding: 0 2em;
+    }
+    .navbar .row_one .col_one .logo img {
+        width: 5em;
+    }
+    .navbar .row_one {
+        grid-template-columns: 7em 1fr 1fr;
+    }
+    .navbar .row_one .col_two .navbar_items ul {
+        padding: 1.7em 0;
+    }
+    .body_content .row_one .header_txt h1 {
+        font-size: 30px;
+    }
+    .body_content .row_one .header_txt p,
+    .body_content .row_one .header_txt a {
+        font-size: 18px;
+    }
+    .body_content .row_one .action_btn button {
+        font-size: 20px;
+    }
+}
+@media all and (min-width: 1200px) {
+    svg {
+        margin: -15em 0 2em 0;
+        z-index: 2;
+        position: relative;
+    }
+    .body_content .row_two .col_two .grid_items,
+    .body_content .row_two .col_three .projects,
+    .body_content .row_two .col_four .courses {
+        grid-gap: 1.5em;
+        padding: 0 5em;
+    }
+    .body_content .row_two .col_two .grid_items img,
+    .body_content .row_two .col_three .projects img,
+    .body_content .row_two .col_four .gold_courses img {
+        width: 100%;
+        height: 13em;
+    }
+}
